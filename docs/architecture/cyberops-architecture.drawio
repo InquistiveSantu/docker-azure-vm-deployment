@@ -1,0 +1,133 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="SZYJcBk_RQ7OldSAejq7">
+    <mxGraphModel dx="2246" dy="2076" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="xy479AF74YBEsRyEoR7I-67" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="680.02" width="1030" x="-100" y="29.99" as="geometry" />
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-65" edge="1" parent="1" source="xy479AF74YBEsRyEoR7I-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;flowAnimation=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="740" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-38" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&#xa;&lt;br class=&quot;Apple-interchange-newline&quot;&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: left; width: 90px; height: 76px; shape-outside: polygon(69.47% 0.05%, 67.12% 0.32%, 52.07% 3.76%, 38.55% 8.32%, 26.77% 13.82%, 16.91% 20.11%, 9.1% 27.03%, 3.45% 34.42%, 0.05% 42.13%, 0.05% 50%, 0.05% 57.87%, 3.45% 65.58%, 9.1% 72.97%, 16.91% 79.89%, 26.77% 86.18%, 38.55% 91.68%, 52.07% 96.24%, 67.12% 99.68%, 69.47% 99.95%, 0.05% 99.95%, 0.05% 0.05%); shape-margin: 2px; pointer-events: none;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: right; width: 91px; height: 76px; shape-outside: polygon(31.6% 0.05%, 33.93% 0.32%, 48.81% 3.76%, 62.18% 8.32%, 73.83% 13.82%, 83.58% 20.11%, 91.31% 27.03%, 96.89% 34.42%, 99.95% 42.13%, 99.95% 50%, 99.95% 57.87%, 96.89% 65.58%, 91.31% 72.97%, 83.58% 79.89%, 73.83% 86.18%, 62.18% 91.68%, 48.81% 96.24%, 33.93% 99.68%, 31.6% 99.95%, 99.95% 99.95%, 99.95% 0.05%); shape-margin: 2px; pointer-events: none;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; height: 23px; pointer-events: none;&quot;&gt;&lt;/div&gt;&lt;font style=&quot;forced-color-adjust: none; color: rgb(0, 0, 0); font-family: Helvetica; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; font-size: 25px;&quot;&gt;Cloudflare&lt;/font&gt;&#xa;&#xa;" vertex="1">
+          <mxGeometry height="160" width="160" x="582.6" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-22" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="" vertex="1">
+          <mxGeometry height="110" width="290" x="160" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="" vertex="1">
+          <mxGeometry height="130" width="310" x="160" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-19" edge="1" parent="1" source="xy479AF74YBEsRyEoR7I-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;flowAnimation=1;" target="xy479AF74YBEsRyEoR7I-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-61" connectable="0" parent="xy479AF74YBEsRyEoR7I-19" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;b&gt;Webhook/trigger&lt;/b&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.1387" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-6" parent="1" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.github" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Source Code&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="130" width="130" x="250" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-7" parent="1" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Azure_DevOps.svg;" value="&lt;b&gt;Azure DevOps&lt;/b&gt;" vertex="1">
+          <mxGeometry height="70" width="70" x="190" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-8" parent="1" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Azure_Pipelines.svg;" value="&lt;b&gt;Classic Pipeline&lt;/b&gt;" vertex="1">
+          <mxGeometry height="60" width="60" x="360" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" value="" vertex="1">
+          <mxGeometry height="40" width="310" x="160" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-16" edge="1" parent="1" source="xy479AF74YBEsRyEoR7I-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;flowAnimation=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="&lt;b&gt;Docker Build &amp;amp; Push&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="110" x="160" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-20" parent="1" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Docker.svg;" value="DockerHub" vertex="1">
+          <mxGeometry height="80" width="97.57" x="200" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-21" parent="1" style="text;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;b&gt;cyberops:v1&lt;/b&gt;" vertex="1">
+          <mxGeometry height="32.84" width="80" x="330" y="558.58" as="geometry" />
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-23" edge="1" parent="1" source="xy479AF74YBEsRyEoR7I-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.537;entryY=-0.014;entryDx=0;entryDy=0;entryPerimeter=0;flowAnimation=1;" target="xy479AF74YBEsRyEoR7I-22">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="480" />
+              <mxPoint x="315.71" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-62" connectable="0" parent="xy479AF74YBEsRyEoR7I-23" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;b&gt;Docker Image Push&lt;/b&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.2988" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-26" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/compute/Virtual_Machine.svg;" value="&lt;b&gt;Azure Virtual Machine&lt;/b&gt;" vertex="1">
+          <mxGeometry height="170" width="183.28" x="620" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-29" parent="1" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#d6b656;" value="" vertex="1">
+          <mxGeometry height="110" width="110" x="652.63" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-30" parent="1" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Docker.svg;" value="&lt;b&gt;Cointainer&lt;/b&gt;" vertex="1">
+          <mxGeometry height="59.03" width="71.99" x="660" y="561" as="geometry" />
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-31" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="&lt;div&gt;&lt;b&gt;nginx : port 80&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="32.84" width="42.63" x="740" y="569.1800000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-32" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="&lt;br&gt;&lt;b&gt;CyberOps Command&amp;nbsp;&amp;nbsp;Center  &lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="25" width="108.68" x="652.6300000000001" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-36" parent="1" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;fillColor=#FF6A00;strokeColor=none;shape=mxgraph.alibaba_cloud.dns_domain_name_system;" value="" vertex="1">
+          <mxGeometry height="80" width="81.31" x="580" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-37" parent="1" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#4495D1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.veeam.2d.proxy;" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Proxy&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="59.03" width="60" x="682.6000000000001" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-57" edge="1" parent="1" source="xy479AF74YBEsRyEoR7I-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;flowAnimation=1;" target="xy479AF74YBEsRyEoR7I-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-45" parent="1" style="sketch=0;outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.users;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" value="" vertex="1">
+          <mxGeometry height="78" width="78" x="819" y="39.78" as="geometry" />
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-52" edge="1" parent="1" source="xy479AF74YBEsRyEoR7I-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;flowAnimation=1;" target="xy479AF74YBEsRyEoR7I-6" value="&lt;b&gt;Code Push&lt;/b&gt;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-46" parent="1" style="image;html=1;image=img/lib/clip_art/general/Full_Folder_128x128.png" value="&lt;span style=&quot;box-sizing: border-box; font-weight: 600; color: rgb(31, 35, 40); font-family: &amp;quot;Mona Sans VF&amp;quot;, -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, &amp;quot;Noto Sans Backtick Fix&amp;quot;, &amp;quot;Noto Sans&amp;quot;, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;; font-size: 20px; text-align: start;&quot;&gt;&lt;a class=&quot;color-fg-default prc-Link-Link-9ZwDx&quot; href=&quot;https://github.com/InquistiveSantu/docker-azure-vm-deployment&quot; style=&quot;box-sizing: border-box; background-color: rgba(0, 0, 0, 0); color: rgb(31, 35, 40) !important; text-decoration: none; text-underline-offset: 0.05rem;&quot;&gt;docker-azure-vm-deployment&lt;/a&gt;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="102.84" width="120" x="20" y="53.58000000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-48" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/general/Files.svg;" value="&lt;b&gt;Files&lt;/b&gt;" vertex="1">
+          <mxGeometry height="65.62" width="60" x="50" y="53.58000000000001" as="geometry" />
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-58" edge="1" parent="1" source="xy479AF74YBEsRyEoR7I-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;flowAnimation=1;" target="xy479AF74YBEsRyEoR7I-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-59" connectable="0" parent="xy479AF74YBEsRyEoR7I-58" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;b&gt;HTTPS :443&lt;/b&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0273" y="-3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-55" parent="1" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/internet_globe.svg;" value="&lt;b&gt;Internet(Browser)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="97.57" width="97.57" x="613.81" y="29.990000000000013" as="geometry" />
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-56" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Users&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="819" y="151.39" as="geometry" />
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-63" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="&lt;b&gt;Deploy(SSH)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="110" x="360" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-64" edge="1" parent="1" source="xy479AF74YBEsRyEoR7I-63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.096;entryY=0.016;entryDx=0;entryDy=0;entryPerimeter=0;flowAnimation=1;" target="xy479AF74YBEsRyEoR7I-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xy479AF74YBEsRyEoR7I-68" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" value="&lt;b&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;CyberOps Command Center-Docker &amp;amp; Azure DevOps Deployment Architecture&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="40" width="1030" x="-100" y="-10" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
