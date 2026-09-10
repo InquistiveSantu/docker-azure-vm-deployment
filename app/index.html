@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CyberOps Command Center — Real-time cloud infrastructure monitoring and DevOps operations dashboard for enterprise-grade SRE teams." />
+  <meta name="keywords" content="DevOps, SRE, cloud operations, infrastructure monitoring, CI/CD, observability" />
+  <meta name="theme-color" content="#090c12" />
+  <meta property="og:title" content="CyberOps Command Center" />
+  <meta property="og:description" content="Enterprise-grade SRE & DevOps visibility layer — monitoring 24 services across 3 regions." />
+  <meta property="og:type" content="website" />
+  <title>CyberOps Command Center — Cloud Ops Platform</title>
+
+  <!-- Favicon (inline SVG) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><polygon points='50,4 96,28 96,72 50,96 4,72 4,28' fill='none' stroke='%2300c8ff' stroke-width='5'/><circle cx='50' cy='50' r='14' fill='%2300c8ff'/></svg>" />
+
+  <!-- Google Fonts (preconnect for performance) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <!-- Skip to main content (accessibility) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ╔══════════════════════════════════════════════╗
+       ║              NAVIGATION BAR                 ║
+       ╚══════════════════════════════════════════════╝ -->
+  <nav id="navbar" class="navbar" aria-label="Primary navigation">
+    <div class="navbar__inner">
+
+      <!-- Logo -->
+      <a href="#hero" class="navbar__logo" aria-label="CyberOps Command Center — return to top">
+        <span class="navbar__logo-icon" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="13,2 24,7.5 24,18.5 13,24 2,18.5 2,7.5" stroke="var(--clr-accent)" stroke-width="1.5" fill="none"/>
+            <polygon points="13,7 19,10.5 19,15.5 13,19 7,15.5 7,10.5" fill="var(--clr-accent)" opacity="0.12"/>
+            <circle cx="13" cy="13" r="3" fill="var(--clr-accent)"/>
+          </svg>
+        </span>
+        <span class="navbar__logo-wordmark">CyberOps<span class="navbar__logo-accent"> CC</span></span>
+      </a>
+
+      <!-- Desktop nav links -->
+      <ul class="navbar__links" role="list">
+        <li><a href="#overview"       class="navbar__link" data-spy="overview">Overview</a></li>
+        <li><a href="#infrastructure" class="navbar__link" data-spy="infrastructure">Infra</a></li>
+        <li><a href="#metrics"        class="navbar__link" data-spy="metrics">Metrics</a></li>
+        <li><a href="#pipeline"       class="navbar__link" data-spy="pipeline">Pipeline</a></li>
+        <li><a href="#alerts"         class="navbar__link" data-spy="alerts">Alerts</a></li>
+        <li><a href="#terminal"       class="navbar__link" data-spy="terminal">Terminal</a></li>
+        <li><a href="#services"       class="navbar__link" data-spy="services">Services</a></li>
+      </ul>
+
+      <!-- Status meta -->
+      <div class="navbar__meta">
+        <span class="navbar__env-badge" aria-label="Environment: Production">PROD</span>
+        <span class="navbar__status-beacon" aria-label="All systems operational" title="All Systems Operational"></span>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button
+        class="navbar__hamburger"
+        id="nav-toggle"
+        aria-expanded="false"
+        aria-controls="nav-drawer"
+        aria-label="Open navigation menu"
+      >
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="nav-drawer" id="nav-drawer" role="dialog" aria-label="Navigation menu" aria-modal="true" hidden>
+      <ul class="nav-drawer__list" role="list">
+        <li><a href="#overview"       class="nav-drawer__link">Overview</a></li>
+        <li><a href="#infrastructure" class="nav-drawer__link">Infrastructure</a></li>
+        <li><a href="#metrics"        class="nav-drawer__link">Metrics</a></li>
+        <li><a href="#pipeline"       class="nav-drawer__link">Pipeline</a></li>
+        <li><a href="#alerts"         class="nav-drawer__link">Alerts</a></li>
+        <li><a href="#terminal"       class="nav-drawer__link">Terminal</a></li>
+        <li><a href="#services"       class="nav-drawer__link">Services</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ╔══════════════════════════════════════════════╗
+       ║                  MAIN                       ║
+       ╚══════════════════════════════════════════════╝ -->
+  <main id="main-content" role="main">
+
+    <!-- ── HERO ─────────────────────────────────────── -->
+    <header id="hero" class="hero">
+      <!-- Animated background -->
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__grid"></div>
+        <div class="hero__scanline"></div>
+        <div class="hero__vignette"></div>
+      </div>
+
+      <div class="hero__inner container">
+
+        <!-- Top status bar -->
+        <div class="hero__topbar">
+          <div class="hero__global-status" id="hero-global-status">
+            <span class="status-beacon status-beacon--ok" aria-hidden="true"></span>
+            <span class="hero__status-label" id="global-status-text">ALL SYSTEMS OPERATIONAL</span>
+          </div>
+          <div class="hero__topbar-right">
+            <span class="hero__region">
+              <span class="label">REGION</span>
+              <strong>East US 2</strong>
+            </span>
+            <time class="hero__clock" id="hero-clock" aria-label="Current UTC time" datetime=""></time>
+          </div>
+        </div>
+
+        <!-- Main title block -->
+        <div class="hero__title-block">
+          <div class="hero__eyebrow" aria-hidden="true">// CLOUD OPERATIONS PLATFORM v3.7.1</div>
+          <h1 class="hero__title">
+            <span class="hero__title-top">CYBEROPS</span>
+            <span class="hero__title-bottom">COMMAND CENTER</span>
+          </h1>
+          <p class="hero__subtitle">
+            Enterprise-grade SRE &amp; DevOps visibility layer —<br>
+            monitoring 24 services across 3 regions in real time
+          </p>
+        </div>
+
+        <!-- Quick stats bar -->
+        <div class="hero__statsbar" role="region" aria-label="Quick system statistics">
+          <div class="hero__stat">
+            <span class="label">UPTIME</span>
+            <strong class="text-accent">99.97%</strong>
+          </div>
+          <div class="hero__stat-divider" aria-hidden="true"></div>
+          <div class="hero__stat">
+            <span class="label">OPEN INCIDENTS</span>
+            <strong class="text-warn" id="hero-incident-count">2</strong>
+          </div>
+          <div class="hero__stat-divider" aria-hidden="true"></div>
+          <div class="hero__stat">
+            <span class="label">LAST SCAN</span>
+            <strong class="text-accent font-mono" id="hero-last-scan">--:--:-- UTC</strong>
+          </div>
+          <div class="hero__stat-divider" aria-hidden="true"></div>
+          <div class="hero__stat">
+            <span class="label">CLUSTER</span>
+            <strong class="text-accent">ALPHA-PROD-01</strong>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- ── SECTION 01 — OPERATIONS OVERVIEW ─────────── -->
+    <section id="overview" class="section section--alt" aria-labelledby="overview-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" id="overview-heading">
+            <span class="section-num" aria-hidden="true">01</span>
+            Operations Overview
+          </h2>
+          <span class="section-badge section-badge--live" aria-label="Live data">LIVE</span>
+        </div>
+
+        <div class="kpi-grid">
+
+          <!-- KPI: System Uptime -->
+          <article class="kpi-card kpi-card--ok" aria-label="System Uptime: 99.97 percent">
+            <div class="kpi-card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M12 7v5l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="kpi-card__content">
+              <div class="kpi-card__label">System Uptime</div>
+              <div class="kpi-card__value" id="kpi-uptime" data-target="99.97" data-decimals="2" data-suffix="%">0%</div>
+              <div class="kpi-card__trend kpi-trend--up">↑ 0.02% vs last week</div>
+            </div>
+            <div class="kpi-card__glow" aria-hidden="true"></div>
+          </article>
+
+          <!-- KPI: Active Services -->
+          <article class="kpi-card kpi-card--ok" aria-label="Active Services: 24 of 24">
+            <div class="kpi-card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <rect x="2" y="3" width="20" height="4" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="2" y="10" width="20" height="4" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <rect x="2" y="17" width="20" height="4" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="6" cy="5" r="0.8" fill="currentColor"/>
+                <circle cx="6" cy="12" r="0.8" fill="currentColor"/>
+                <circle cx="6" cy="19" r="0.8" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="kpi-card__content">
+              <div class="kpi-card__label">Active Services</div>
+              <div class="kpi-card__value" id="kpi-services" data-target="24" data-decimals="0" data-suffix="/24">0/24</div>
+              <div class="kpi-card__trend kpi-trend--neutral">→ All pods running</div>
+            </div>
+            <div class="kpi-card__glow" aria-hidden="true"></div>
+          </article>
+
+          <!-- KPI: Open Incidents -->
+          <article class="kpi-card kpi-card--warn" aria-label="Open Incidents: 2">
+            <div class="kpi-card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L2 20h20L12 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                <path d="M12 9v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <circle cx="12" cy="17.5" r="0.75" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="kpi-card__content">
+              <div class="kpi-card__label">Open Incidents</div>
+              <div class="kpi-card__value kpi-card__value--warn" id="kpi-incidents" data-target="2" data-decimals="0" data-suffix="">0</div>
+              <div class="kpi-card__trend kpi-trend--down">↓ 3 resolved today</div>
+            </div>
+            <div class="kpi-card__glow kpi-card__glow--warn" aria-hidden="true"></div>
+          </article>
+
+          <!-- KPI: MTTR -->
+          <article class="kpi-card kpi-card--ok" aria-label="Average MTTR: 4.2 minutes">
+            <div class="kpi-card__icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path d="M3 12a9 9 0 1 0 9-9 9 9 0 0 0-6.36 2.64" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M3 3v6h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="kpi-card__content">
+              <div class="kpi-card__label">Avg MTTR</div>
+              <div class="kpi-card__value" id="kpi-mttr" data-target="4.2" data-decimals="1" data-suffix=" min">0 min</div>
+              <div class="kpi-card__trend kpi-trend--up">↑ 18% improvement</div>
+            </div>
+            <div class="kpi-card__glow" aria-hidden="true"></div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 02 — INFRASTRUCTURE HEALTH ─────── -->
+    <section id="infrastructure" class="section" aria-labelledby="infra-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" id="infra-heading">
+            <span class="section-num" aria-hidden="true">02</span>
+            Infrastructure Health
+          </h2>
+          <span class="section-badge section-badge--live">12 NODES</span>
+        </div>
+        <!-- Nodes injected by dashboard.js -->
+        <div class="infra-grid" id="infra-grid" aria-label="Server node status grid" role="list"></div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 03 — LIVE METRICS ─────────────── -->
+    <section id="metrics" class="section section--alt" aria-labelledby="metrics-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" id="metrics-heading">
+            <span class="section-num" aria-hidden="true">03</span>
+            Live Metrics
+          </h2>
+          <span class="section-badge">AUTO-REFRESH 5s</span>
+        </div>
+
+        <div class="metrics-grid">
+
+          <!-- CPU -->
+          <div class="metric-card" id="metric-cpu">
+            <div class="metric-card__gauge-wrap">
+              <svg class="gauge" viewBox="0 0 120 120" role="img" aria-label="CPU utilization gauge">
+                <circle class="gauge__track" cx="60" cy="60" r="50"/>
+                <circle class="gauge__fill gauge__fill--cpu" id="gauge-cpu" cx="60" cy="60" r="50"/>
+                <text class="gauge__label" x="60" y="55" text-anchor="middle" aria-hidden="true">CPU</text>
+                <text class="gauge__pct"   x="60" y="72" text-anchor="middle" id="gauge-cpu-pct" aria-hidden="true">0%</text>
+              </svg>
+            </div>
+            <div class="metric-card__body">
+              <h3 class="metric-card__title">CPU Utilization</h3>
+              <div class="metric-card__sparkline-wrap">
+                <svg class="sparkline" id="sparkline-cpu" viewBox="0 0 200 60" preserveAspectRatio="none" role="img" aria-label="CPU usage history">
+                  <defs>
+                    <linearGradient id="sg-cpu" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="var(--clr-accent)" stop-opacity="0.3"/>
+                      <stop offset="100%" stop-color="var(--clr-accent)" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <polygon class="sparkline__fill" id="spark-cpu-fill" points="" fill="url(#sg-cpu)"/>
+                  <polyline class="sparkline__line spark-cpu" id="spark-cpu-line" points=""/>
+                </svg>
+              </div>
+              <dl class="metric-stats">
+                <div class="metric-stat"><dt class="label">AVG</dt><dd id="cpu-avg" class="font-mono">--</dd></div>
+                <div class="metric-stat"><dt class="label">PEAK</dt><dd id="cpu-peak" class="font-mono">--</dd></div>
+                <div class="metric-stat"><dt class="label">CORES</dt><dd class="font-mono">32</dd></div>
+              </dl>
+            </div>
+          </div>
+
+          <!-- Memory -->
+          <div class="metric-card" id="metric-mem">
+            <div class="metric-card__gauge-wrap">
+              <svg class="gauge" viewBox="0 0 120 120" role="img" aria-label="Memory usage gauge">
+                <circle class="gauge__track" cx="60" cy="60" r="50"/>
+                <circle class="gauge__fill gauge__fill--mem" id="gauge-mem" cx="60" cy="60" r="50"/>
+                <text class="gauge__label" x="60" y="55" text-anchor="middle" aria-hidden="true">MEM</text>
+                <text class="gauge__pct"   x="60" y="72" text-anchor="middle" id="gauge-mem-pct" aria-hidden="true">0%</text>
+              </svg>
+            </div>
+            <div class="metric-card__body">
+              <h3 class="metric-card__title">Memory Usage</h3>
+              <div class="metric-card__sparkline-wrap">
+                <svg class="sparkline" id="sparkline-mem" viewBox="0 0 200 60" preserveAspectRatio="none" role="img" aria-label="Memory usage history">
+                  <defs>
+                    <linearGradient id="sg-mem" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="var(--clr-purple)" stop-opacity="0.3"/>
+                      <stop offset="100%" stop-color="var(--clr-purple)" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <polygon class="sparkline__fill" id="spark-mem-fill" points="" fill="url(#sg-mem)"/>
+                  <polyline class="sparkline__line spark-mem" id="spark-mem-line" points=""/>
+                </svg>
+              </div>
+              <dl class="metric-stats">
+                <div class="metric-stat"><dt class="label">USED</dt><dd id="mem-used" class="font-mono">--</dd></div>
+                <div class="metric-stat"><dt class="label">FREE</dt><dd id="mem-free" class="font-mono">--</dd></div>
+                <div class="metric-stat"><dt class="label">TOTAL</dt><dd class="font-mono">128 GB</dd></div>
+              </dl>
+            </div>
+          </div>
+
+          <!-- Network I/O -->
+          <div class="metric-card" id="metric-net">
+            <div class="metric-card__gauge-wrap">
+              <svg class="gauge" viewBox="0 0 120 120" role="img" aria-label="Network I/O gauge">
+                <circle class="gauge__track" cx="60" cy="60" r="50"/>
+                <circle class="gauge__fill gauge__fill--net" id="gauge-net" cx="60" cy="60" r="50"/>
+                <text class="gauge__label" x="60" y="55" text-anchor="middle" aria-hidden="true">NET</text>
+                <text class="gauge__pct"   x="60" y="72" text-anchor="middle" id="gauge-net-pct" aria-hidden="true">0%</text>
+              </svg>
+            </div>
+            <div class="metric-card__body">
+              <h3 class="metric-card__title">Network I/O</h3>
+              <div class="metric-card__sparkline-wrap">
+                <svg class="sparkline" id="sparkline-net" viewBox="0 0 200 60" preserveAspectRatio="none" role="img" aria-label="Network I/O history">
+                  <defs>
+                    <linearGradient id="sg-net" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="var(--clr-green)" stop-opacity="0.3"/>
+                      <stop offset="100%" stop-color="var(--clr-green)" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <polygon class="sparkline__fill" id="spark-net-fill" points="" fill="url(#sg-net)"/>
+                  <polyline class="sparkline__line spark-net" id="spark-net-line" points=""/>
+                </svg>
+              </div>
+              <dl class="metric-stats">
+                <div class="metric-stat"><dt class="label">IN</dt><dd id="net-in" class="font-mono">--</dd></div>
+                <div class="metric-stat"><dt class="label">OUT</dt><dd id="net-out" class="font-mono">--</dd></div>
+                <div class="metric-stat"><dt class="label">CAP</dt><dd class="font-mono">10 Gbps</dd></div>
+              </dl>
+            </div>
+          </div>
+
+          <!-- Disk I/O -->
+          <div class="metric-card" id="metric-disk">
+            <div class="metric-card__gauge-wrap">
+              <svg class="gauge" viewBox="0 0 120 120" role="img" aria-label="Disk I/O gauge">
+                <circle class="gauge__track" cx="60" cy="60" r="50"/>
+                <circle class="gauge__fill gauge__fill--disk" id="gauge-disk" cx="60" cy="60" r="50"/>
+                <text class="gauge__label" x="60" y="55" text-anchor="middle" aria-hidden="true">DISK</text>
+                <text class="gauge__pct"   x="60" y="72" text-anchor="middle" id="gauge-disk-pct" aria-hidden="true">0%</text>
+              </svg>
+            </div>
+            <div class="metric-card__body">
+              <h3 class="metric-card__title">Disk I/O</h3>
+              <div class="metric-card__sparkline-wrap">
+                <svg class="sparkline" id="sparkline-disk" viewBox="0 0 200 60" preserveAspectRatio="none" role="img" aria-label="Disk I/O history">
+                  <defs>
+                    <linearGradient id="sg-disk" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="var(--clr-warn)" stop-opacity="0.3"/>
+                      <stop offset="100%" stop-color="var(--clr-warn)" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <polygon class="sparkline__fill" id="spark-disk-fill" points="" fill="url(#sg-disk)"/>
+                  <polyline class="sparkline__line spark-disk" id="spark-disk-line" points=""/>
+                </svg>
+              </div>
+              <dl class="metric-stats">
+                <div class="metric-stat"><dt class="label">READ</dt><dd id="disk-read" class="font-mono">--</dd></div>
+                <div class="metric-stat"><dt class="label">WRITE</dt><dd id="disk-write" class="font-mono">--</dd></div>
+                <div class="metric-stat"><dt class="label">TOTAL</dt><dd class="font-mono">4 TB</dd></div>
+              </dl>
+            </div>
+          </div>
+
+        </div><!-- /metrics-grid -->
+      </div>
+    </section>
+
+    <!-- ── SECTION 04 — CI/CD PIPELINE ───────────── -->
+    <section id="pipeline" class="section" aria-labelledby="pipeline-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" id="pipeline-heading">
+            <span class="section-num" aria-hidden="true">04</span>
+            CI/CD Pipeline
+          </h2>
+          <span class="section-badge">BUILD #847</span>
+        </div>
+
+        <div class="pipeline-card">
+          <!-- Build metadata row -->
+          <div class="pipeline-meta">
+            <div class="pipeline-meta__item">
+              <span class="label">Branch</span>
+              <strong>main</strong>
+            </div>
+            <div class="pipeline-meta__item">
+              <span class="label">Commit</span>
+              <strong class="font-mono">a3f9c2d</strong>
+            </div>
+            <div class="pipeline-meta__item">
+              <span class="label">Author</span>
+              <strong>ops-bot</strong>
+            </div>
+            <div class="pipeline-meta__item">
+              <span class="label">Triggered</span>
+              <strong id="pipeline-triggered" class="font-mono">--:--:-- UTC</strong>
+            </div>
+            <div class="pipeline-meta__item">
+              <span class="label">Status</span>
+              <strong class="text-warn">IN PROGRESS</strong>
+            </div>
+          </div>
+
+          <!-- Pipeline stage track -->
+          <ol class="pipeline-track" aria-label="CI/CD pipeline stages" id="pipeline-stages">
+
+            <li class="pipeline-stage pipeline-stage--success" data-stage="source">
+              <div class="pipeline-stage__bubble" aria-label="Source: complete">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="pipeline-stage__info">
+                <span class="pipeline-stage__name">Source</span>
+                <span class="pipeline-stage__dur">0:12s</span>
+              </div>
+              <div class="pipeline-stage__connector" aria-hidden="true"></div>
+            </li>
+
+            <li class="pipeline-stage pipeline-stage--success" data-stage="build">
+              <div class="pipeline-stage__bubble" aria-label="Build: complete">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="pipeline-stage__info">
+                <span class="pipeline-stage__name">Build</span>
+                <span class="pipeline-stage__dur">1:43s</span>
+              </div>
+              <div class="pipeline-stage__connector" aria-hidden="true"></div>
+            </li>
+
+            <li class="pipeline-stage pipeline-stage--success" data-stage="test">
+              <div class="pipeline-stage__bubble" aria-label="Test: complete">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M3 8l3.5 3.5L13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="pipeline-stage__info">
+                <span class="pipeline-stage__name">Test</span>
+                <span class="pipeline-stage__dur">2:18s</span>
+              </div>
+              <div class="pipeline-stage__connector" aria-hidden="true"></div>
+            </li>
+
+            <li class="pipeline-stage pipeline-stage--running" data-stage="scan">
+              <div class="pipeline-stage__bubble" aria-label="Security Scan: in progress">
+                <div class="pipeline-spinner" aria-hidden="true"></div>
+              </div>
+              <div class="pipeline-stage__info">
+                <span class="pipeline-stage__name">Sec Scan</span>
+                <span class="pipeline-stage__dur" id="scan-elapsed">0:47s</span>
+              </div>
+              <div class="pipeline-stage__connector pipeline-stage__connector--partial" aria-hidden="true"></div>
+            </li>
+
+            <li class="pipeline-stage pipeline-stage--pending" data-stage="deploy">
+              <div class="pipeline-stage__bubble" aria-label="Deploy: pending">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <div class="pipeline-stage__info">
+                <span class="pipeline-stage__name">Deploy</span>
+                <span class="pipeline-stage__dur">—</span>
+              </div>
+              <div class="pipeline-stage__connector" aria-hidden="true"></div>
+            </li>
+
+            <li class="pipeline-stage pipeline-stage--pending" data-stage="verify">
+              <div class="pipeline-stage__bubble" aria-label="Verify: pending">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <div class="pipeline-stage__info">
+                <span class="pipeline-stage__name">Verify</span>
+                <span class="pipeline-stage__dur">—</span>
+              </div>
+            </li>
+
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 05 — ALERT FEED ────────────────── -->
+    <section id="alerts" class="section section--alt" aria-labelledby="alerts-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" id="alerts-heading">
+            <span class="section-num" aria-hidden="true">05</span>
+            Alert Feed
+          </h2>
+          <div class="alert-counts" role="status" aria-label="Alert summary">
+            <span class="alert-badge alert-badge--crit" id="badge-crit" aria-label="Critical alerts: 1">CRIT <strong>1</strong></span>
+            <span class="alert-badge alert-badge--warn" id="badge-warn" aria-label="Warning alerts: 4">WARN <strong>4</strong></span>
+            <span class="alert-badge alert-badge--info" id="badge-info" aria-label="Info alerts: 12">INFO <strong>12</strong></span>
+          </div>
+        </div>
+
+        <div class="alert-panel">
+          <div class="alert-panel__toolbar">
+            <div class="filter-group" role="group" aria-label="Filter alerts by severity">
+              <button class="filter-btn filter-btn--active" data-filter="all"      id="filter-all">All</button>
+              <button class="filter-btn"                   data-filter="critical"  id="filter-crit">Critical</button>
+              <button class="filter-btn"                   data-filter="warning"   id="filter-warn">Warning</button>
+              <button class="filter-btn"                   data-filter="info"      id="filter-info">Info</button>
+            </div>
+            <span class="live-indicator" aria-hidden="true">● LIVE</span>
+          </div>
+
+          <ul
+            class="alert-feed"
+            id="alert-feed"
+            role="log"
+            aria-label="Live alert feed"
+            aria-live="polite"
+            aria-atomic="false"
+          >
+            <!-- Alerts injected by alerts.js -->
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 06 — OPS TERMINAL ─────────────── -->
+    <section id="terminal" class="section" aria-labelledby="terminal-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" id="terminal-heading">
+            <span class="section-num" aria-hidden="true">06</span>
+            Ops Log Terminal
+          </h2>
+          <span class="section-badge section-badge--live">STREAMING</span>
+        </div>
+
+        <div class="terminal-wrap">
+          <div class="terminal-titlebar" aria-hidden="true">
+            <div class="terminal-dots">
+              <span class="dot dot--red"></span>
+              <span class="dot dot--yellow"></span>
+              <span class="dot dot--green"></span>
+            </div>
+            <span class="terminal-tab">ops@cyberops-prod:~$&nbsp;<em>tail -f /var/log/ops/system.log</em></span>
+          </div>
+
+          <div
+            class="terminal-body"
+            id="terminal-body"
+            role="log"
+            aria-label="System log output"
+            aria-live="polite"
+            aria-atomic="false"
+          >
+            <!-- Log lines injected by terminal.js -->
+          </div>
+
+          <div class="terminal-footer" aria-hidden="true">
+            <span class="terminal-prompt">ops@alpha-prod-01 ~ $&nbsp;</span>
+            <span class="terminal-cursor" aria-hidden="true"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTION 07 — MICROSERVICES ────────────── -->
+    <section id="services" class="section section--alt" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" id="services-heading">
+            <span class="section-num" aria-hidden="true">07</span>
+            Microservices
+          </h2>
+          <span class="section-badge">24 REGISTERED</span>
+        </div>
+        <!-- Service cards injected by dashboard.js -->
+        <div class="services-grid" id="services-grid" aria-label="Microservice status cards"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ╔══════════════════════════════════════════════╗
+       ║                  FOOTER                     ║
+       ╚══════════════════════════════════════════════╝ -->
+  <footer id="footer" class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="footer__wordmark">CyberOps CC</span>
+        <span class="footer__version font-mono">v3.7.1 · build <abbr title="Git commit hash">a3f9c2d</abbr></span>
+      </div>
+      <div class="footer__copy">
+        &copy; 2026 CyberOps Platform &mdash; All rights reserved
+      </div>
+      <div class="footer__meta">
+        <span class="label">Last scan:</span>
+        <span id="footer-last-scan" class="font-mono text-accent">--:--:-- UTC</span>
+        <span class="footer__region-tag">East US 2</span>
+      </div>
+    </div>
+  </footer>
+
+  <!--
+    NOTE: <script type="module"> requires an HTTP server (e.g. Nginx).
+    For local testing without a server, use: npx serve ./app
+    The production target is Nginx inside Docker, which handles modules correctly.
+  -->
+  <script type="module" src="./js/main.js"></script>
+
+</body>
+</html>
