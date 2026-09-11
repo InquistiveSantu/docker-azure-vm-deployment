@@ -470,8 +470,8 @@ This project provided hands-on practical experience with:
 
 **Santu Paira**
 
-- [LinkedIn]
-- [GitHub]
+- [LinkedIn](https://www.linkedin.com/in/santu-paira-9417543a9/)
+- [GitHub](https://github.com/InquistiveSantu)
 
 ---
 
