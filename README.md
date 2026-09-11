@@ -159,7 +159,6 @@ docker-azure-vm-deployment/
 │       └── docker.md
 │
 ├── Dockerfile                  # Container build instructions
-├── docker-compose.yml          # Docker Compose configuration
 ├── .dockerignore               # Docker build context exclusions
 ├── .gitignore                  # Git exclusions
 ├── LICENSE                     # Project license
@@ -445,7 +444,7 @@ CMD ["nginx", "-g", "daemon off;"]
 - **Image vulnerability scanning** — Add a pipeline step to scan the Docker image for known vulnerabilities (e.g., Trivy)
 - **Infrastructure as Code** — Replace manual Azure VM provisioning with Terraform or Bicep templates
 - **Multi-stage Docker build** — Optimize the image further with multi-stage builds if a build step is introduced
-- **Docker Compose deployment** — Fully populate and use `docker-compose.yml` for managing the container stack
+- **Docker Compose deployment** — Introduce a `docker-compose.yml` to manage the container stack declaratively
 
 ---
 
